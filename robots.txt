@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://km613225-alt.github.io/kma-fotografia/sitemap.xml
