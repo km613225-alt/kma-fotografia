@@ -2,7 +2,7 @@
 
 Portafolio web de Kevin Molina Antonio (KMA): fotografía de paisaje, cielo nocturno, retrato y eventos en la Ciudad de México.
 
-Sitio publicado con GitHub Pages: https://km613225-alt.github.io/kma-fotografia/
+Sitio publicado en **https://kmalux.com** (GitHub Pages con dominio propio registrado en Cloudflare).
 
 ## Qué incluye
 
@@ -35,11 +35,12 @@ robots.txt, sitemap.xml                             Para que Google encuentre la
 
 ## Dominio propio
 
-1. Compra el dominio (por ejemplo, en Namecheap, Cloudflare o GoDaddy).
-2. En el registrador, crea estos registros DNS:
-   - Cuatro registros `A` para `@` apuntando a `185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`.
-   - Un registro `CNAME` para `www` apuntando a `km613225-alt.github.io`.
-3. En GitHub: **Settings → Pages → Custom domain**, escribe el dominio y activa **Enforce HTTPS**.
-4. Cambia la dirección base en `index.html` (etiquetas `canonical` y `og:`), `robots.txt` y `sitemap.xml`.
+El dominio `kmalux.com` está registrado en Cloudflare y apunta a GitHub Pages:
+
+- El archivo `CNAME` de este repositorio contiene `kmalux.com` (no lo borres).
+- DNS en Cloudflare (todos en modo **Solo DNS**, nube gris):
+  - Cuatro registros `A` para `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`.
+  - Un registro `CNAME` para `www` apuntando a `km613225-alt.github.io`.
+- En GitHub: **Settings → Pages → Enforce HTTPS** activado.
 
 © 2026 Kevin Molina Antonio. Las fotografías están protegidas por derechos de autor y no se permite su uso sin autorización.
