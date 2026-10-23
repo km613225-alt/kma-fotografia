@@ -37,7 +37,7 @@ body{margin:0}
 img{max-width:100%}
 [hidden]{display:none!important}
 /* Layout: sala de exhibición oscura con dos pestañas. Inicio: nombre, galería en filas justificadas (cada foto completa,
-   misma altura por fila), "Sobre mí" y contacto. Servicios: lista de precios en filas, cotización y condiciones.
+   misma altura por fila), "Sobre mí" y contacto. Servicios: lista de servicios en filas, cotización y condiciones.
    Un solo tema oscuro, elegido a propósito: sobre un fondo profundo las fotos ganan contraste y color. */
 :root{
   color-scheme:dark;
@@ -142,7 +142,7 @@ h2{margin:0;font-family:var(--cursive);font-style:italic;font-weight:500;font-si
   .ba-tab[aria-pressed="true"]{box-shadow:none;padding-left:0;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:1px;text-underline-offset:.3em}
 }
 
-/* Pestaña Servicios: lista de precios con filas, como una tarifa impresa */
+/* Pestaña Servicios: lista de servicios en filas, sin precios (todo se cotiza) */
 .svc-intro .wrap{display:flex;flex-direction:column;gap:20px;padding-block:clamp(56px,9vw,128px) clamp(40px,6vw,72px)}
 .svc-intro p{margin:0;max-width:52ch;font-size:clamp(17px,1.7vw,21px);color:var(--soft)}
 .rates-sec .wrap{padding-bottom:clamp(56px,8vw,112px)}
@@ -152,9 +152,6 @@ h2{margin:0;font-family:var(--cursive);font-style:italic;font-weight:500;font-si
 .rate p{margin:0;max-width:54ch;font-size:16.5px}
 .rate p.incl{margin-top:6px;color:var(--soft)}
 .rate-side{display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:right}
-.price{font-family:var(--cursive);font-style:italic;font-weight:500;font-size:clamp(36px,4vw,54px);line-height:1;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
-.price small{margin-left:6px;font-family:var(--sans);font-style:normal;font-weight:400;font-size:15px;color:var(--soft)}
-.price .from{margin-right:8px;font-family:var(--sans);font-style:normal;font-weight:400;font-size:15px;color:var(--soft)}
 .book{display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:400;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:.3em}
 .book:hover{text-decoration-color:var(--gold)}
 
@@ -422,21 +419,20 @@ dialog.viewer[open]{animation:fade .25s ease-out}
   <section class="svc-intro" aria-labelledby="servicios-title">
     <div class="wrap">
       <h1 id="servicios-title">Servicios</h1>
-      <p>Sesiones de foto, eventos, video y edición. Cada precio es un punto de partida. Si tu presupuesto es menor, dime con cuánto cuentas y armo un paquete a tu medida.</p>
+      <p>Sesiones de foto, eventos, video y edición. Cada proyecto se cotiza a tu medida: cuéntame qué necesitas y con cuánto cuentas, y armo un paquete que se ajuste a tu presupuesto.</p>
     </div>
   </section>
 
-  <section class="rates-sec" aria-label="Servicios y precios en pesos mexicanos">
+  <section class="rates-sec" aria-label="Servicios">
     <div class="wrap">
       <ul class="rates">
         <li class="rate">
           <div>
             <h3>Retrato en exterior</h3>
             <p>Sesión con luz natural en una locación de la ciudad, de preferencia en la hora dorada.</p>
-            <p class="incl">Mini sesión de 30 minutos con 10 fotos editadas. Sesión completa de 1 hora con 20 fotos: $1,500.</p>
+            <p class="incl">Mini sesión de 30 minutos con 10 fotos editadas. También hay sesión completa de 1 hora con 20 fotos.</p>
           </div>
           <div class="rate-side">
-            <span class="price"><span class="from">desde</span>$900</span>
             <a class="book" href="#cotizar" data-service="Retrato en exterior">Pedir cotización</a>
           </div>
         </li>
@@ -447,7 +443,6 @@ dialog.viewer[open]{animation:fade .25s ease-out}
             <p class="incl">30 minutos y 5 fotos editadas. Entrega en 3 días.</p>
           </div>
           <div class="rate-side">
-            <span class="price"><span class="from">desde</span>$700</span>
             <a class="book" href="#cotizar" data-service="Retrato profesional">Pedir cotización</a>
           </div>
         </li>
@@ -458,7 +453,6 @@ dialog.viewer[open]{animation:fade .25s ease-out}
             <p class="incl">1 hora y 25 fotos editadas.</p>
           </div>
           <div class="rate-side">
-            <span class="price"><span class="from">desde</span>$1,900</span>
             <a class="book" href="#cotizar" data-service="Pareja, familia o amigos">Pedir cotización</a>
           </div>
         </li>
@@ -466,10 +460,9 @@ dialog.viewer[open]{animation:fade .25s ease-out}
           <div>
             <h3>Eventos sociales</h3>
             <p>Bautizos, cumpleaños y primeras comuniones. Cubro la ceremonia, los momentos con la familia y los detalles.</p>
-            <p class="incl">2 horas y 50 fotos editadas. 3 horas y 80 fotos o más: $3,800. Hora extra: $900.</p>
+            <p class="incl">2 horas y 50 fotos editadas, o 3 horas y 80 fotos o más. Puedes agregar horas extra.</p>
           </div>
           <div class="rate-side">
-            <span class="price"><span class="from">desde</span>$2,800</span>
             <a class="book" href="#cotizar" data-service="Evento social">Pedir cotización</a>
           </div>
         </li>
@@ -480,7 +473,6 @@ dialog.viewer[open]{animation:fade .25s ease-out}
             <p class="incl">Un video vertical de 30 a 60 segundos con música y texto en pantalla, grabado en hasta 2 horas en una locación. Paquetes de varios videos, a cotizar.</p>
           </div>
           <div class="rate-side">
-            <span class="price"><span class="from">desde</span>$2,500</span>
             <a class="book" href="#cotizar" data-service="Video publicitario">Pedir cotización</a>
           </div>
         </li>
@@ -491,7 +483,6 @@ dialog.viewer[open]{animation:fade .25s ease-out}
             <p class="incl">A partir de 10 fotos. Entrega en 5 días. <a href="#antes-despues">Ver ejemplos de antes y después</a></p>
           </div>
           <div class="rate-side">
-            <span class="price">$60<small>por foto</small></span>
             <a class="book" href="#cotizar" data-service="Edición de fotos">Pedir cotización</a>
           </div>
         </li>
@@ -523,7 +514,7 @@ dialog.viewer[open]{animation:fade .25s ease-out}
             <li><strong>Uso de las fotos:</strong> yo conservo la autoría y tú las usas libremente para fines personales y en tus redes. En videos y fotos para negocios, el uso comercial va incluido.</li>
             <li><strong>Tu privacidad:</strong> solo muestro tus fotos en mi portafolio o redes si me das permiso por escrito. Si en la sesión hay niños, el permiso lo dan sus padres.</li>
           </ul>
-          <p class="terms-note">Precios en pesos mexicanos. El traslado dentro de la Ciudad de México está incluido; fuera de la ciudad se cotiza aparte. Cada foto editada adicional cuesta $60.</p>
+          <p class="terms-note">El traslado dentro de la Ciudad de México está incluido; fuera de la ciudad se cotiza aparte.</p>
         </div>
       </div>
     </div>
